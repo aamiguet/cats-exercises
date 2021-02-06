@@ -4,10 +4,8 @@ package sandbox
 //import cats.syntax.semigroup._
 
 import sandbox.typeclass.Cat
-import sandbox.typeclass.Printable
+import sandbox.typeclass.PrintableSyntax._
 
 object Main extends App {
-  val cat = Cat("Garfield", 25, "orange")
-
-  Printable.print(cat);
+  Cat("Garfield", 14, "orange").print
 }

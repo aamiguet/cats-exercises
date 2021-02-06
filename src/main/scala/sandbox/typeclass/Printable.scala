@@ -2,6 +2,8 @@ package sandbox.typeclass
 
 trait Printable[A] {
   def format(value: A): String
+
+  def print(value: A): Unit = println(format(value))
 }
 
 object Printable {
@@ -9,5 +11,5 @@ object Printable {
     p.format(value)
 
   def print[A](value: A)(implicit p: Printable[A]): Unit =
-    println(p.format(value))
+    p.print(value)
 }
