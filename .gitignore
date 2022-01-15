@@ -19,3 +19,8 @@ project/plugins/project/
 # End of https://www.toptal.com/developers/gitignore/api/sbt
 
 .code-workspace
+
+### Metals ###
+.metals/
+.bloop/
+project/**/metals.sbt
